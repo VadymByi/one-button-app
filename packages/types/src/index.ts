@@ -4,3 +4,17 @@ export interface ClickResponse {
   status: "clicked" | "idle";
   clickCount: number;
 }
+export interface ClickActionResponse {
+  id: string;
+  status: "IDLE" | "CLICKED";
+  message: string;
+  payload: {
+    lastClickedAt: string | null;
+    clickCount: number;
+    processedBy: string;
+  };
+  serverInfo: {
+    version: string;
+    environment: string;
+  };
+}

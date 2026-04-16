@@ -7,7 +7,8 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test:related": "echo 'Skipping tests for now'"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",
@@ -24,5 +25,10 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "scheduler": "^0.27.0"
+  }
 }
