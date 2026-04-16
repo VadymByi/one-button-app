@@ -3,6 +3,7 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  await app.listen(process.env.PORT ?? 3000);
+  app.enableCors(); // Разрешаем запросы с других доменов
+  await app.listen(3001); // Бэкенд будет на 3001
 }
 bootstrap();
